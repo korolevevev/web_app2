@@ -1,1 +1,1 @@
-web: gunicorn wsgi:web_app2
+web: flask db upgrade; flask translate compile; gunicorn web_app2:app
