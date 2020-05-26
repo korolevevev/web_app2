@@ -13,4 +13,4 @@ def make_shell_context():
 @click.command(name='create_tables')
 @with_appcontext
 def create_tables():
-    db.create.all()
+    db.create_all()
