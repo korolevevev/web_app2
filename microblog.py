@@ -1,5 +1,5 @@
 from app import app, db
-from app.models import User, Post
+from app.models import User, Post, PostLike
 
 if __name__ == '__main__':
     app.run(debug=False)

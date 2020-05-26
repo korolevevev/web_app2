@@ -2,7 +2,7 @@ import click
 from flask.cli import with_appcontext
 
 from app import app, db
-from app.models import User, Post
+from app.models import User, Post, PostLike
 
 @click.command(name='create_tables')
 @with_appcontext
