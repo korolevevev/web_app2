@@ -1,5 +1,6 @@
 from app import app, db
 from app.models import User, Post
+import clickfrom flask.cli import with_appcontext
 
 if __name__ == '__main__':
     app.run(debug=False)
