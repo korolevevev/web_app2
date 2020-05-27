@@ -8,12 +8,11 @@ from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from .commands import create_tables
 
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
-db.create_all()
-db.session.commit()
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
