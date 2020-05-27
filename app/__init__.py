@@ -19,6 +19,8 @@ login.login_view = 'login'
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 
+app.cli.add_command(create_tables)
+
 if not app.debug:
     if app.config['MAIL_SERVER']:
         auth = None
