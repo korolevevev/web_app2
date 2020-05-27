@@ -12,6 +12,8 @@ from flask_moment import Moment
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
+db.create_all()
+db.session.commit()
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
